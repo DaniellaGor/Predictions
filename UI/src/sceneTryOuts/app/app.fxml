@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.app.AppController">
+   <content>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="900.0">
+         <top>
+            <fx:include fx:id="headerComponent" source="../header/Header.fxml" />
+         </top>
+         <center>
+            <fx:include fx:id="bodyComponent" source="../body/body.fxml" />
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.header.HeaderController">
+   <top>
+      <ScrollPane fitToHeight="true" fitToWidth="true">
+         <content>
+            <GridPane minHeight="80.0" minWidth="550.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="94.5999755859375" />
+                <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="138.59999999999997" />
+                  <ColumnConstraints maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="87.60002441406249" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="159.99997558593753" />
+                <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="159.99997558593753" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER_LEFT" minHeight="0.0" minWidth="0.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Button fx:id="loadFileButton" mnemonicParsing="false" onAction="#loadFileButtonListener" text="Load File" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+                  <VBox alignment="CENTER" minHeight="0.0" minWidth="0.0" GridPane.columnIndex="2" />
+                  <VBox fx:id="queueManagementVBox" alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="30.0" prefWidth="144.0" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label fx:id="threadPoolQueueLabel" />
+                        <Label fx:id="threadPoolActiveLabel" />
+                        <Label fx:id="threadPoolCompletedLabel" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <HBox fx:id="fileValidationHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                  <VBox GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                     <children>
+                        <Label fx:id="filePath" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                     <children>
+                        <Label text="Threads in Queue:" />
+                        <Label text="Active Threads:" />
+                        <Label text="Complited Threads:" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+                  <Label fx:id="programNameLabel" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="606.0" text="Predictions" GridPane.columnIndex="3" />
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </top>
+</BorderPane>
